@@ -1,0 +1,34 @@
+body{
+    margin:0;                     /* elimina el margen */
+    background-color:#f0f2f5;     /* color blanco de fondo para toda la página */
+}
+
+.inicio{
+    height:100vh;                 /* ocupa todo el navegador */
+    display:flex;                 /* ordena la pagina */
+    justify-content:center;       /* centra el contenido de forma horizontal */
+    align-items:center;           /* centra el contenido de forma vertical */
+    flex-direction:column;        /* coloca los elementos uno debajo del otro */
+    text-align:center;            /* centra el texto */
+}
+
+h1{
+    font-size:48px;               /* título grande */
+    color:#333;                   /* gris oscuro */
+    margin-bottom:20px;           /* espacio debajo del título */
+}
+
+.btn-entrar{
+    padding:15px 40px;            /* tamaño del botón */
+    font-size:20px;               /* tamaño del texto del botón */
+    background-color:#6c5ce7;     /* color morado  */
+    color:white;                  /* texto blanco */
+    border:none;                  /* sin borde */
+    border-radius:8px;            /* bordes redondeados */
+    cursor:pointer;               /* cursor de mano al pasar por encima */
+    transition:transform 0.2s;    /* animacion pa la transicion*/
+}
+
+.btn-entrar:hover{
+    transform:scale(1.1);         /* el boton se hace mas grande al pasar el raton */
+}
