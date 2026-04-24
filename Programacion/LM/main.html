@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styles/styleMain.css">
+</head>
+<body>
+    <div class="main">
+
+        <!-- cabecera -->
+        <header class="cabecera">
+            <h1 class="logo">Escaparate</h1>
+
+            <div class="buscador">
+                <input type="text" id="buscarInput" placeholder="Buscar">
+                <button id="buscarBtn">Buscar</button>
+            </div>
+
+            <div class="tema">
+                <button id="temaClaro" class="btnTema active">Claro</button>
+                <button id="temaOscuro" class="btnTema">Oscuro</button>
+                <button id="temaPersonalizado" class="btnTema">Personalizar</button>
+            </div>
+
+            <div class="botones-accion">
+                <button id="añadirBtn" class="btn-añadir"> Añadir foto</button>
+                
+                <!-- Botón para pedir cita con desplegable -->
+                <div class="dropdown">
+                    <button id="citaBtn" class="btn-cita"> Pedir Cita</button>
+                    <div class="dropdown-content" id="dropdownCitas">
+                        <a href="#" data-vehiculo="Nissan Skyline R34">Nissan Skyline R34</a>
+                        <a href="#" data-vehiculo="McLaren 720s">McLaren 720s</a>
+                        <a href="#" data-vehiculo="Audi RS3 Sportback">Audi RS3 Sportback</a>
+                        <a href="#" data-vehiculo="Mustang Shelby Cobra">Mustang Shelby Cobra</a>
+                        <a href="#" data-vehiculo="BMW Serie 3 E46">BMW Serie 3 E46</a>
+                        <a href="#" data-vehiculo="Mazda RX7 Turbo">Mazda RX7 Turbo</a>
+                        <a href="#" data-vehiculo="Mercedes Clase G">Mercedes Clase G</a>
+                        <a href="#" data-vehiculo="Ford Mustang Shelby GT500">Ford Mustang Shelby GT500</a>
+                        <a href="#" data-vehiculo="Kawasaki Ninja H2">Kawasaki Ninja H2</a>
+                        <a href="#" data-vehiculo="Yamaha MT 07">Yamaha MT 07</a>
+                        <a href="#" data-vehiculo="Ducati Panigale">Ducati Panigale</a>
+                        <a href="#" data-vehiculo="Harley Davidson">Harley Davidson</a>
+                        <a href="#" data-vehiculo="BMW e250">BMW e250</a>
+                        <a href="#" data-vehiculo="Moto para Moteros">Moto para Moteros</a>
+                        <a href="#" data-vehiculo="Honda CRF250">Honda CRF250</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="galeria" id="tarjetasContainer"></main>
+
+        <!-- pie de pagina -->
+        <footer class="pie">
+            <p>Trabajo realizado por: Raúl, Nacho e Iñigo</p>
+        </footer>
+    </div>
+
+    <!-- personalizacion de colores -->
+    <div id="modalColores" class="modal">
+        <div class="color">
+            <span class="cerrar" id="cerrarColores">&times;</span>
+            <h2>Tema personalizado</h2>
+            <p>Elige los colores:</p>
+            <label>Color de cabecera:
+                <input type="color" id="colorCabecera" value="#f5f5f5">
+            </label>
+            <label>Color de fondo principal:
+                <input type="color" id="colorMain" value="#ffffff">
+            </label>
+            <label>Color de pie de página:
+                <input type="color" id="colorPie" value="#333333">
+            </label>
+            <button id="aplicarColores" class="btn-modal">Aplicar cambios</button>
+        </div>
+    </div>
+
+    <!-- añadir tarjeta -->
+    <div id="añadir" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" id="cerrarañadir">&times;</span>
+            <h2>Subir nueva foto</h2>
+            <form id="formAñadir">
+                <label>Título:
+                    <input type="text" id="nuevoTitulo" required>
+                </label>
+                <label>Descripción:
+                    <textarea id="nuevoTexto" rows="3" required></textarea>
+                </label>
+                <label>Selecciona una imagen:
+                    <input type="file" id="nuevaImagen" accept="image/*" required>
+                </label>
+                <div id="preview" class="previewImagen"></div>
+                <button type="submit" class="btn-modal">Añadir a la galería</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para el formulario de cita -->
+    <div id="modalCita" class="modal-cita">
+        <div class="modal-cita-content">
+            <span class="cerrar-cita">&times;</span>
+            <h2>Solicitar Cita de Prueba</h2>
+            <form id="formCita">
+                <div class="form-group">
+                    <label for="vehiculo">Vehículo seleccionado:</label>
+                    <input type="text" id="vehiculoSeleccionado" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha preferida:</label>
+                    <input type="date" id="fecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora">Hora preferida:</label>
+                    <select id="hora" required>
+                        <option value="">Selecciona una hora</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comentarios">Comentarios adicionales:</label>
+                    <textarea id="comentarios" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-enviar-cita">Enviar solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mensaje de confirmación -->
+    <div id="mensajeConfirmacion" class="mensaje-confirmacion"></div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
