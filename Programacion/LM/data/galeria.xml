@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<galeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="galeria.xsd">
+
+    <tarjeta>
+        <titulo>Nissan Skyline r34 | 75000€</titulo>
+        <texto>Coche del año 2000, usado con maticula: 9874 GFY.</texto>
+        <imagen enlace="img/skyline.jpg" />
+    </tarjeta>
+
+    <tarjeta>
+        <titulo>Mclaren 720s | 145000€</titulo>
+        <texto>Coche del año 2024, nuevo con matricula: 2104 MYI.</texto>
+        <imagen enlace="img/720.avif" />
+    </tarjeta>
+
+    <tarjeta>
+        <titulo>Audi RS3 Sportback | 57000€ </titulo>
+        <texto>Coche del año 2023, nuevo con matricula: 5678 DEF.</texto>
+        <imagen enlace="img/RS3-1.png" />
+    </tarjeta>
+
+    <tarjeta>
+        <titulo>Mustang Shelby Cobra | 45000€</titulo>
+        <texto>Coche del 2017, nuevo con matricula: 1122 JKL.</texto>
+        <imagen enlace="img/cobra.webp" />
+    </tarjeta>
+
+    <tarjeta>
+        <titulo>BMW Serie 3 E46 | 12000€</titulo>
+        <texto>Coche del año 2014, usado con matricula: 1234 ABC.</texto>
+        <imagen enlace="img/e46.jpg" />
+    </tarjeta>
+
+    <tarjeta>
+        <titulo>Mazda RX7 Turbo | 12000€</titulo>
+        <texto>Coche del año 2008, usado con matricula: 1345 SFJ.</texto>
+        <imagen enlace="img/mazda.jpg" />
+    </tarjeta>
+
+    <tarjeta>
+        <titulo>Mercedes Clase G | 66500€</titulo>
+        <texto>Coche del año 2022, nuevo con matricula: 9101 GHI.</texto>
+        <imagen enlace="img/G-Class_from_front.jpeg" />
+    </tarjeta>
+
+    <tarjeta>
+        <titulo>Kawasaki Ninja H2 | 8350€</titulo>
+        <texto>Moto del año 2020, usada con matricula: 3592 LOL.</texto>
+        <imagen enlace="img/kawasaki.webp" />
+    </tarjeta>
+
+    <tarjeta>
+        <titulo>Harley Davidson | 8000€ </titulo>
+        <texto>Moto del año 2012, usada con matricula: 1023 GHP.</texto>
+        <imagen enlace="img/5b.jpg" />
+    </tarjeta>
+
+    <tarjeta>
+        <titulo>BMW e250 | 9000€</titulo>
+        <texto>Moto del año 2021, nueva con matricula: 8668 KLK.</texto>
+        <imagen enlace="img/WND2.avif" />
+    </tarjeta>
+
+</galeria>
